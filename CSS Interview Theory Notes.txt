@@ -1,0 +1,161 @@
+CSS Interview Theory Notes
+1️⃣ Why do we remove default margin and padding?
+
+Browsers apply default margin and padding to some HTML elements such as body, headings, and paragraphs. This may create unwanted spacing in the layout.
+
+To maintain consistency and full control over design, developers reset margin and padding to zero using a universal selector. This practice ensures predictable and clean layouts across different browsers.
+
+2️⃣ What is the CSS Box Model?
+
+The CSS Box Model describes how elements are structured and spaced on a webpage. Every element is treated as a rectangular box consisting of:
+
+Content – The actual text or image.
+
+Padding – Space between content and border.
+
+Border – The outline around padding.
+
+Margin – Space outside the border.
+
+The total size of an element depends on width, padding, and border.
+
+3️⃣ What is the purpose of box-sizing?
+
+The box-sizing property controls how the total width and height of an element are calculated.
+
+By default, box-sizing is set to content-box, where padding and border are added outside the defined width and height.
+
+When set to border-box, padding and border are included inside the defined width and height.
+
+Using border-box makes layout management easier and more predictable, especially in responsive design.
+
+4️⃣ What is CSS Specificity?
+
+CSS Specificity determines which style rule is applied when multiple rules target the same element.
+
+The priority order from highest to lowest is:
+
+Inline styles > ID selectors > Class selectors > Element selectors > Universal selector.
+
+Higher specificity rules override lower ones.
+
+5️⃣ What is the difference between Class and ID?
+
+A class selector is used to style multiple elements and can be reused across a webpage.
+
+An ID selector is used to style one unique element and should not be repeated.
+
+ID selectors have higher specificity than class selectors.
+
+6️⃣ What are the ways to apply CSS?
+
+There are three ways to apply CSS:
+
+Inline CSS – Applied directly inside an HTML element using the style attribute.
+
+Internal CSS – Written inside a <style> tag within the HTML file.
+
+External CSS – Written in a separate .css file and linked to the HTML document.
+
+External CSS is the most recommended method for large and professional projects.
+
+7️⃣ What is Margin in CSS?
+
+Margin is the space outside an element’s border. It controls the distance between elements.
+
+Margins can be applied to all four sides individually or using shorthand notation.
+
+Vertical margins between two elements may collapse, meaning the larger margin value is applied instead of adding both.
+
+8️⃣ What is the Display Property?
+
+The display property defines how an element behaves in the layout.
+
+Common values include:
+
+Block – Takes full width and starts on a new line.
+
+Inline – Takes only required width and does not start on a new line.
+
+Inline-block – Behaves like inline but allows width and height control.
+
+None – Removes the element from the document flow.
+
+Flex – Enables flexible layout system.
+
+Grid – Enables two-dimensional layout system.
+
+9️⃣ What is the order Property?
+
+The order property is used in flexbox and grid layouts to control the visual order of elements.
+
+The default value is 0. Lower values appear first.
+
+It changes only the visual order, not the actual HTML structure.
+
+
+CSS Box Model
+
+Every HTML element is treated as a rectangular box consisting of:
+
+Content → Padding → Border → Margin
+
+Content is the actual text or image.
+Padding is the inner space between content and border.
+Border surrounds padding.
+Margin is the outer space between elements.
+
+Margin in CSS
+
+Margin creates space outside the border of an element.
+
+Margins can be applied to:
+
+top
+
+right
+
+bottom
+
+left
+
+Vertical margins may collapse, meaning the larger margin value is applied instead of adding both
+
+Padding
+
+Padding creates space inside the element between content and border.
+It increases the element’s visible size unless box-sizing: border-box is used.
+
+Display Property
+
+The display property controls how an element behaves in layout.
+
+block → takes full width and starts on new line
+inline → takes only required width, no new line
+inline-block → inline but width & height allowed
+none → element removed from layout
+
+Visibility Property
+
+visibility: hidden hides the element but space remains reserved.
+display: none removes the element completely from layout.
+
+Border Styles
+
+Common border styles:
+
+solid, dashed, dotted, double, groove, ridge, inset, outset, none
+
+Flex-wrap
+
+flex-wrap: wrap allows flex items to move to the next line when space is not available.
+
+Without wrap, items shrink to fit in one row.
+
+Order Property (Flexbox)
+
+The order property changes the visual order of flex items.
+
+Default value = 0
+Lower value appears first.
+It only changes visual position, not HTML structure.

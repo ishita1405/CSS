@@ -1,0 +1,189 @@
+/* ===============================
+   GLOBAL SETTINGS
+=================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(212, 212, 212);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    animation: fadeInPage 1s ease-in;
+}
+
+/* Page Fade Animation */
+@keyframes fadeInPage {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* ===============================
+   HEADER SECTION
+=================================*/
+
+.header {
+    border-radius: 12px;
+    margin: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-left: 6px solid #2F5597;
+    border-right: 6px solid #2F5597;
+    animation: slideDown 1s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header h1 {
+    color: #2F5597;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: rgb(106, 94, 94);
+}
+
+.intro {
+    padding: 12px;
+}
+
+.Profile {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Profile Image Animation */
+.profile-img {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: zoomIn 1.2s ease-in-out;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* ===============================
+   COMMON SECTION STYLING
+=================================*/
+
+.about,
+.education,
+.Internship,
+.Certification,
+.projects,
+.skill,
+.hobbies {
+    border-radius: 12px;
+    margin: 12px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-left: 6px solid #2F5597;
+    border-right: 6px solid #2F5597;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+/* Fade Up Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Heading Color */
+.education h1,
+.about h1,
+.Certification h1,
+.projects h1,
+.Internship h1,
+.skill h1,
+.hobbies h1 {
+    color: #2F5597;
+    margin-bottom: 15px;
+}
+
+
+/* ===============================
+   SKILLS SECTION
+=================================*/
+
+.myskill {
+    display: inline-block;
+    min-width: 90px;
+    padding: 10px 18px;
+    margin: 8px;
+    background-color: #5B9BD5;
+    color: #FFFFFF;
+    border-radius: 22px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.myskill:hover {
+    background-color: #2F5597;
+    transform: scale(1.08);
+    box-shadow: 0 6px 14px rgba(47, 85, 151, 0.4);
+}
+
+
+/* ===============================
+   LIST STYLING
+=================================*/
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+
+.about { transition-delay: 0.1s; }
+.education { transition-delay: 0.2s; }
+.skill { transition-delay: 0.3s; }
+.Internship { transition-delay: 0.4s; }
+.Certification { transition-delay: 0.5s; }
+.projects { transition-delay: 0.6s; }
+.hobbies { transition-delay: 0.7s; }
